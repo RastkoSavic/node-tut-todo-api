@@ -1,8 +1,8 @@
 const expect = require('expect');
 const request = require('supertest');
 
-const {app} = require('./../server');
-const {Todo} = require('./../models/todo');
+const { app } = require('./../server');
+const { Todo } = require('./../models/todo');
 
 beforeEach((done) => {
     Todo.remove({}).then(() => done());
@@ -14,7 +14,7 @@ describe('POST /todos', () => {
 
         request(app)
             .post('/todos')
-            .send({text})
+            .send({ text })
             .expect(200)
             .expect((res) => {
                 expect(res.body.text).toBe(text);
@@ -40,7 +40,7 @@ describe('POST /todos', () => {
             .send({})
             .expect(400)
             .end((err, res) => {
-                
+
                 if (err) {
                     return done(err);
                 }
@@ -49,7 +49,7 @@ describe('POST /todos', () => {
                     expect(todos.length).toBe(0);
                     done();
                 }).catch((e) => done(e));
-                
+
             });
     });
 });
