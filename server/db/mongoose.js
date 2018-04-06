@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-'mongodb://RastkoS:mrasha23lab87@ds135179.mlab.com:35179/todo_api' || 
+// 'mongodb://RastkoS:mrasha23lab87@ds135179.mlab.com:35179/todo_api' || 
 
 mongoose.connect('mongodb://RastkoS:mrasha23lab87@ds135179.mlab.com:35179/todo_api' || 'mongodb://127.0.0.1:27017/TodoApp');
 
