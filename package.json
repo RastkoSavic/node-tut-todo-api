@@ -14,13 +14,14 @@
     "api"
   ],
   "engines": {
-    "node":"8.9.1"
+    "node": "8.9.1"
   },
   "author": "Rastko Savic",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "lodash": "^4.17.5",
     "mongodb": "^2.2.5",
     "mongoose": "^5.0.12"
   },
